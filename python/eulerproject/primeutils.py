@@ -1,4 +1,5 @@
 # n: n is prime and n >= 2
+#
 
 def next_prime(n):
 	if n < 5:
