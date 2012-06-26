@@ -1,13 +1,13 @@
 from projecteuler.primeutils import next_prime
 
 def prime_factorization(n):
-    limit = n / 2
+    limit = int(n ** 0.5)
     prime = 2
 
     while prime <= limit:
         if n % prime == 0:
             n     = n / prime
-            limit = n / 2
+            limit = int(n ** 0.5)
         else:
             prime = next_prime(prime)
 

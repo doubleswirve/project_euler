@@ -19,7 +19,7 @@ def evenly(upper_bound):
     return n
 
 def factorize(n):
-    upper_bound   = n / 2
+    upper_bound   = int(n ** 0.5)
     prime_divisor = 2
     factors       = []
 
@@ -27,7 +27,7 @@ def factorize(n):
         if n % prime_divisor == 0:
             factors.append(prime_divisor)
             n           = n / prime_divisor
-            upper_bound = n / 2
+            upper_bound = int(n ** 0.5)
         else:
             prime_divisor = next_prime(prime_divisor)
 
