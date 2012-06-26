@@ -1,3 +1,6 @@
+def _function():
+    pass
+
 def sum_mult_3_5(boundary):
 	acc = 0
 	for n in xrange(3, boundary + 1, 3):
