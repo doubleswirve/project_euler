@@ -1,4 +1,4 @@
-from eulerproject.primeutils import next_prime
+from projecteuler.primeutils import next_prime
 
 def nth_prime(n):
     prime = 2

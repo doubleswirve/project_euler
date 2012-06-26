@@ -1,4 +1,4 @@
-from eulerproject.primeutils import next_prime
+from projecteuler.primeutils import next_prime
 
 def prime_factorization(n):
     limit = n / 2

@@ -1,4 +1,4 @@
-from eulerproject import primeutils
+from projecteuler import primeutils
 
 primes = {}
 
