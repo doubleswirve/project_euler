@@ -1,0 +1,3 @@
+# Project Euler Solutions
+
+Just for fun...
