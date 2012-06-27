@@ -1,17 +1,17 @@
-from projecteuler.primeutils import next_prime
+from projecteuler.primeutils import get_sieve
 
-def sum_of_primes(n):
-    prime = 2
-    acc   = 0
+def sum_primes(n):
+    sieve = get_sieve(n)
 
-    while prime < n:
-        acc   = acc + prime
-        prime = next_prime(prime)
+    acc = 0
+    for i in xrange(2, n):
+        if sieve[i]:
+            acc = acc + i
 
     return acc
 
 def main():
-    print sum_of_primes(2000000)
+    print sum_primes(2000000)
 
 if __name__ == '__main__':
     main()

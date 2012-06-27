@@ -16,6 +16,6 @@
 		<tr><th>7</th><th>0.250</th><th>10006</th></tr>
 		<tr><th>8</th><th>0.004</th><th>4</th></tr>
 		<tr><th>9</th><th>0.022</th><th>4</th></tr>
-		<tr><th>10</th><th>24.343</th><th>148939</th></tr>
+		<tr><th>10</th><th>0.714</th><th>7</th></tr>
 	</tbody>
 </table>

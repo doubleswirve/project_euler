@@ -15,3 +15,25 @@ def next_prime(n):
             divisor = divisor + 2
 
     return n
+
+def prime_generator(n):
+    sieve = [True] * n
+
+    for i in xrange(2, int(n ** 0.5) + 1):
+        if sieve[i]:
+            for j in xrange(i ** 2, n, i):
+                sieve[j] = False
+
+    for i in xrange(2, n):
+        if sieve[i]:
+            yield i
+
+def get_sieve(n):
+    sieve = [True] * n
+
+    for i in xrange(2, int(n ** 0.5) + 1):
+        if sieve[i]:
+            for j in xrange(i * i, n, i):
+                sieve[j] = False
+
+    return sieve
