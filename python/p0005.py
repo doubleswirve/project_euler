@@ -1,18 +1,19 @@
 from math import log10
 
-from projecteuler.primeutils import get_primes
+from projecteuler.primeutils import get_sieve
 
 def evenly(n):
-    limit  = int(n ** 0.5) + 1
-    primes = get_primes(n)
-    log_n  = log10(n)
+    limit = int(n ** 0.5) + 1
+    sieve = get_sieve(n)
+    log_n = log10(n)
 
     acc = 1
-    for p in primes:
-        if p < limit:
-            acc = acc * p ** int(log_n / log10(p))
-        else:
-            acc = acc * p
+    for i in xrange(2, n):
+        if sieve[i]:
+            if i < limit:
+                acc = acc * i ** int(log_n / log10(i))
+            else:
+                acc = acc * i
 
     return acc
 
