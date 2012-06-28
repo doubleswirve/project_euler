@@ -21,7 +21,7 @@ def prime_generator(n):
 
     for i in xrange(2, int(n ** 0.5) + 1):
         if sieve[i]:
-            for j in xrange(i ** 2, n, i):
+            for j in xrange(i * i, n, i):
                 sieve[j] = False
 
     for i in xrange(2, n):
@@ -37,3 +37,13 @@ def get_sieve(n):
                 sieve[j] = False
 
     return sieve
+
+def get_primes(n):
+    sieve = get_sieve(n)
+
+    primes = []
+    for i in xrange(2, n):
+        if sieve[i]:
+            primes.append(i)
+
+    return primes
