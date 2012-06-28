@@ -1,4 +1,4 @@
-# Euler Project - Python Solutions
+# Python Solutions
 
 ### cProfile Benchmarks
 
